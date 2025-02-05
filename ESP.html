@@ -1,0 +1,24 @@
+# List of references
+references = [
+    # Add all your references here as strings
+    "Gagliano, E., Biondi, D., & Roccaro, P. (2022). Wastewater-based epidemiology approach: The learning lessons from COVID-19 pandemic and the development of novel guidelines for future pandemics. Chemosphere. https://doi.org/10.1016/j.chemosphere.2022.137361",
+    "Garvey, M., Meade, E., & Rowan, N. J. (2022). Effectiveness of front line and emerging fungal disease prevention and control interventions and opportunities to address appropriate eco-sustainable solutions. Science of the Total Environment, 851, 158284. https://doi.org/10.1016/j.scitotenv.2022.158284",
+    # Add other references here
+]
+
+# Find duplicates
+def find_duplicates(ref_list):
+    seen = set()
+    duplicates = set()
+    for ref in ref_list:
+        if ref in seen:
+            duplicates.add(ref)
+        seen.add(ref)
+    return duplicates
+
+duplicates = find_duplicates(references)
+
+# Print duplicates
+print("Duplicates found:")
+for dup in duplicates:
+    print(dup)
